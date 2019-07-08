@@ -19,31 +19,27 @@ export class TodoItem extends Component {
     
 
     render() {
-    const {id, label} = this.props.item;
+    const {label} = this.props.item;
         return (
             <div style={this.getStyle()}>  
-                <li className="list-group-item ">
-                    <p>
-                        <input type='checkbox' onChange={this.props.markComplete.bind(this, id)} /> {' '}
-                        {label}
-                        <button onClick={this.props.delItem.bind(this, this.props.item)} style={btnStyle}>X</button>
-                        
-                    </p>
+                <li className="list-group-item listGroupItem">
+                    <span>
+                        <i 
+                            className="fa fa-trash" 
+                            onClick={this.props.delItem.bind(this, this.props.item)}>
+                        </i>
+                    </span>
+                    {'  '}    
+                    {label}
+                                           
+                    
                 </li>
             </div>
         )
     }
 }
 
-const btnStyle = {
-    background: '#ff0000',
-    color: '#fff',
-    boder: 'none',
-    padding: '5px 10px',
-    boderRadius: '50%',
-    curso: 'pointer',
-    float: 'right'
-}
+
 
 //PropTypes
 TodoItem.propTypes = {

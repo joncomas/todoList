@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
   border-color: beige;
@@ -8,3 +10,53 @@
   text-align: center;
 }
 
+li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
+li.clicked {
+  color: gray;
+  text-decoration: line-through;
+}
+i.fa-trash {
+  margin: 7px;
+}
+
+span {
+  background: tomato;
+  height: 35px;
+  width: 0;
+  margin-right: 10px;
+  margin-left: -10px;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  opacity: 0;
+  transition: .2s linear;  
+}
+
+li:hover span {
+  opacity: 1.0;
+  width: 40px;
+}
+
+input#addToDo {
+  font-size: 18px;
+  color: #2980b9;
+  background: #B7EEFF;
+  border: none;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-border-box: border-box;
+}
+
+.checkbox {
+  text-align: left;
+  margin-left: 0%;
+}
+
+.listGroupItem {
+  text-align: left;
+}

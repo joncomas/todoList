@@ -54,8 +54,6 @@ markComplete = (id) => {
       item.done = !item.done;
     }
     return item;
-
-
   })});
 }
 
@@ -66,12 +64,19 @@ markComplete = (id) => {
      console.log(this.state.todos)
         return (
           <div className="App">
-            <div className='container'>              
-              <Header className='todoHeader'/>
-              <Addtodo addTodo={this.addTodo} />      
-              <ul className="list-group ">
-              <Todos ptodos={this.state.todos} markComplete={this.markComplete} delItem={this.delItem}/>
-              </ul>
+            <div className='container bg-light'>
+              <div class="row">
+                <div class="col-md-4 offset-4">              
+                  <Header className='todoHeader'/>
+                  <Addtodo addTodo={this.addTodo} />      
+                  <ul className="list-group ">
+                    <Todos ptodos={this.state.todos} markComplete={this.markComplete} delItem={this.delItem}/>
+                  <li className="list-group-item ">
+                    {this.state.todos.length}
+                  </li>
+                  </ul>
+                </div>   
+              </div>     
             </div>  
           </div>
     );

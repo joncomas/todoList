@@ -3,27 +3,28 @@ import TodoItem from './TodoItem';
 import PropTypes from 'prop-types';
 
 class Todos extends React.Component {
-    constructor(props){
+    constructor(props) {
         super();
     }
+    render() {
 
-
-
-
-        render() {
-           
-          return (this.props.ptodos.map((item, i)=>{
-            return(    
-                <TodoItem key={i} item={item} markComplete={this.props.markComplete} delItem={this.props.delItem} addTodo={this.props.addTodo}/>               
+        return (this.props.ptodos.map((item, i) => {
+            return (
+                <TodoItem
+                    key={i}
+                    item={item} 
+                    markComplete={this.props.markComplete} 
+                    delItem={this.props.delItem} 
+                    addTodo={this.props.addTodo} />
             )
-        })         
-      );
+        })
+        );
     }
-  }
+}
 
-  //PropTypes
-  Todos.propType = {
+//PropTypes
+Todos.propType = {
     ptodos: PropTypes.array.isRequired
-  }
+}
 
 export default Todos;
